@@ -14,27 +14,6 @@ function Page() {
         <Intro />
       </section>
       {/* End Intro */}
-      {/* Home */}
-      {/* {
-        <section className="">
-          <Home />
-        </section>
-      } */}
-      {/* End Home */}
-      {/* Bangun datar */}
-      {
-        // <section className="">
-        //   <BangunDatar />
-        // </section>
-      }
-      {/* End Bangun datar */}
-      {/* Bangun ruang */}
-      {/* {
-        <section className="">
-          <BangunRuang />
-        </section>
-      } */}
-      {/* End Bangun ruang */}
     </>
   );
 }
