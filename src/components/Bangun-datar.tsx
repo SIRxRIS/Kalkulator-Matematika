@@ -1,11 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { IoArrowBack } from "react-icons/io5"; // Import ikon
 
 const BangunDatar = () => {
-  const router = useRouter();
-
   return (
     <div className="min-h-screen w-full pattern-background relative">
       {/* Tombol Kembali */}
