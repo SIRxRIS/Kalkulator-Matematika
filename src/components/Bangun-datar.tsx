@@ -18,7 +18,7 @@ const BangunDatar = () => {
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                       w-[90%] max-w-2xl bg-[#F7E581] rounded-xl p-6 shadow-lg"
       >
-        <h1 className="text-black text-center text-2xl font-poppins font-bold mb-6">
+        <h1 className="text-black text-center text-[28px] font-poppins font-bold mb-6">
           Kalkulator Bangun Datar
         </h1>
 
@@ -28,7 +28,7 @@ const BangunDatar = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Persegi
             </button>
@@ -38,7 +38,7 @@ const BangunDatar = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Jajar Genjang
             </button>
@@ -48,7 +48,7 @@ const BangunDatar = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Persegi Panjang
             </button>
@@ -58,9 +58,19 @@ const BangunDatar = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Layang-layang
+            </button>
+          </Link>
+
+          <Link href="/bangun-datar/persegi-panjang">
+            <button
+              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
+                             hover:bg-[#4891f0] transition-all duration-300 
+                             font-poppins text-[20px] shadow-xl"
+            >
+              Persegi Panjang II
             </button>
           </Link>
 
@@ -68,7 +78,7 @@ const BangunDatar = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Lingkaran
             </button>
@@ -78,7 +88,7 @@ const BangunDatar = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Belah Ketupat
             </button>
@@ -88,7 +98,7 @@ const BangunDatar = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Segitiga
             </button>
@@ -98,7 +108,7 @@ const BangunDatar = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Trapesium
             </button>

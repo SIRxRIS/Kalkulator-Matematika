@@ -28,7 +28,7 @@ const BangunRuang = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Kubus
             </button>
@@ -38,7 +38,7 @@ const BangunRuang = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Limas Segitiga
             </button>
@@ -48,7 +48,7 @@ const BangunRuang = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Balok
             </button>
@@ -58,7 +58,7 @@ const BangunRuang = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Tabung
             </button>
@@ -68,9 +68,19 @@ const BangunRuang = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Limas Segiempat
+            </button>
+          </Link>
+
+          <Link href="/bangun-ruang/tabung">
+            <button
+              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
+                             hover:bg-[#4891f0] transition-all duration-300 
+                             font-poppins text-[20px] shadow-xl"
+            >
+              Tabung II
             </button>
           </Link>
 
@@ -78,7 +88,7 @@ const BangunRuang = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Kerucut
             </button>
@@ -88,7 +98,7 @@ const BangunRuang = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Prisma Segitiga
             </button>
@@ -98,7 +108,7 @@ const BangunRuang = () => {
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-sm"
+                             font-poppins text-[20px] shadow-xl"
             >
               Bola
             </button>
