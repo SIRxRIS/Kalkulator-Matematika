@@ -33,31 +33,31 @@ const PersegiPanjang2 = () => {
         <h1 className="text-black text-2xl font-poppins font-bold mb-4">Kalkulator Persegi Panjang</h1>
         <p className="text-black mb-2 font-semibold">Masukkan Nilai</p>
         
-        <label className="block text-left font-semibold">Panjang:</label>
+        <label className="block text-left font-semibold text-black">Panjang:</label>
         <div className="flex items-center">
           <input
             type="text"
             placeholder="Masukkan Panjang"
             value={panjang}
             onChange={(e) => setPanjang(e.target.value)}
-            className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md"
+            className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md text-black"
           />
-          <select value={satuan} onChange={(e) => setSatuan(e.target.value)} className="ml-2 p-2 border border-gray-400 rounded-lg">
+          <select value={satuan} onChange={(e) => setSatuan(e.target.value)} className="ml-2 p-2 border border-gray-400 rounded-lg text-black">
             <option value="cm">cm</option>
             <option value="m">m</option>
           </select>
         </div>
         
-        <label className="block text-left font-semibold">Lebar:</label>
+        <label className="block text-left font-semibold text-black">Lebar:</label>
         <div className="flex items-center">
           <input
             type="text"
             placeholder="Masukkan Lebar"
             value={lebar}
             onChange={(e) => setLebar(e.target.value)}
-            className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md"
+            className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md text-black"
           />
-          <select value={satuan} onChange={(e) => setSatuan(e.target.value)} className="ml-2 p-2 border border-gray-400 rounded-lg">
+          <select value={satuan} onChange={(e) => setSatuan(e.target.value)} className="ml-2 p-2 border border-gray-400 rounded-lg text-black">
             <option value="cm">cm</option>
             <option value="m">m</option>
           </select>
@@ -70,7 +70,7 @@ const PersegiPanjang2 = () => {
           Hitung
         </button>
 
-        <div className="border border-gray-400 p-4 bg-white rounded-lg shadow-md text-left">
+        <div className="border border-gray-400 p-4 bg-white rounded-lg shadow-md text-left text-black">
           <p className="font-semibold">Hasil Luas: {luas !== null ? `${luas} ${satuan}²` : "-"}</p>
           <p className="font-semibold">Hasil Keliling: {keliling !== null ? `${keliling} ${satuan}` : "-"}</p>
         </div>
@@ -84,7 +84,7 @@ const PersegiPanjang2 = () => {
               Lihat Rumus
             </div>
             {showRumus && (
-              <div className="absolute w-full mt-2 p-3 bg-white border border-gray-400 rounded-lg text-left shadow-md animate-fade-in">
+              <div className="absolute w-full mt-2 p-3 bg-white border border-gray-400 rounded-lg text-left shadow-md animate-fade-in text-black">
                 <p><strong>Rumus Luas:</strong> Panjang x Lebar</p>
                 <p><strong>Rumus Keliling:</strong> 2 x (Panjang + Lebar)</p>
               </div>
@@ -111,7 +111,7 @@ const PersegiPanjang2 = () => {
             >
               <IoClose />
             </button>
-            <h2 className="text-xl font-bold text-center mb-4">Hasil Perkalian</h2>
+            <h2 className="text-xl font-bold text-center mb-4 text-black">Hasil Perkalian</h2>
             <div className="flex flex-col space-y-2">
               <p>Panjang x Lebar = {panjang} x {lebar} <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= {luas}</p>
               <p>2 x (Panjang + Lebar) = 2 x ({panjang} + {lebar}) <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= {keliling}</p>
