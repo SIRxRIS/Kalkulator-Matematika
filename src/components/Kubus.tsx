@@ -44,23 +44,23 @@ const Kubus = () => {
         <div className="grid grid-cols-2 gap-4 mb-6">
           <div>
             <label className="block text-sm font-medium text-gray-800 mb-1">Rumus Luas</label>
-            <div className="bg-white p-2 rounded border border-gray-300 text-center">
+            <div className="bg-white p-2 rounded border border-gray-300 text-center text-black">
               6 × R^2
             </div>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-800 mb-1">Rumus Volume</label>
-            <div className="bg-white p-2 rounded border border-gray-300 text-center">
+            <div className="bg-white p-2 rounded border border-gray-300 text-center text-black">
               R^3
             </div>
           </div>
         </div>
         
         <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-800 mb-1">Rusuk</label>
+          <label className="block text-sm font-medium text-gray-800 mb-1 "> Panjang Rusuk</label>
           <input 
             type="number" 
-            className="w-full rounded border border-gray-300 p-2"
+            className="w-full rounded border border-gray-300 p-2 text-black"
             value={rusuk}
             onChange={(e) => setRusuk(e.target.value)}
             placeholder="Masukkan panjang rusuk"
@@ -69,7 +69,7 @@ const Kubus = () => {
         
         <div className="mb-6">
           <button 
-            className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded w-full"
+            className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded w-full font-semibold"
             onClick={hitungKubus}
           >
             Hitung
@@ -80,16 +80,16 @@ const Kubus = () => {
           <table className="w-full">
             <thead>
               <tr>
-                <th className="border-b border-r border-gray-300 p-2 text-center bg-gray-100">Luas</th>
-                <th className="border-b border-gray-300 p-2 text-center bg-gray-100">Volume</th>
+                <th className="border-b border-r border-gray-300 p-2 text-center bg-gray-100 text-black">Luas</th>
+                <th className="border-b border-gray-300 p-2 text-center bg-gray-100 text-black">Volume</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="border-r border-gray-300 p-2 text-center">
+                <td className="border-r border-gray-300 p-2 text-center text-black">
                   {luas !== null ? luas.toFixed(2) : ''}
                 </td>
-                <td className="p-2 text-center">
+                <td className="p-2 text-center text-black">
                   {volume !== null ? volume.toFixed(2) : ''}
                 </td>
               </tr>

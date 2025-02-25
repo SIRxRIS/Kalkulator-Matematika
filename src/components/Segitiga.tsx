@@ -44,18 +44,18 @@ const Segitiga = () => {
           <h2 className="text-sm text-gray-800">Muh.fadlan kamil</h2>
         </div>
         
-        <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Kalkulator Segitiga</h1>
+        <h1 className="text-2xl font-bold text-center text-black mb-6">Kalkulator Segitiga</h1>
         
         <div className="grid grid-cols-2 gap-4 mb-6">
           <div>
-            <label className="block text-sm font-medium text-gray-800 mb-1">Rumus Luas</label>
-            <div className="bg-white p-2 rounded border border-gray-300 text-center">
+            <label className="block text-sm font-medium text-black mb-1">Rumus Luas</label>
+            <div className="bg-white p-2 rounded border border-gray-300 text-center text-black">
               1/2 × a × t
             </div>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-800 mb-1">Rumus Keliling</label>
-            <div className="bg-white p-2 rounded border border-gray-300 text-center">
+            <div className="bg-white p-2 rounded border border-gray-300 text-center text-black">
               s × s × s
             </div>
           </div>
@@ -66,7 +66,7 @@ const Segitiga = () => {
             <label className="block text-sm font-medium text-gray-800 mb-1">Alas</label>
             <input 
               type="number" 
-              className="w-full rounded border border-gray-300 p-2"
+              className="w-full rounded border border-gray-300 p-2 text-black"
               value={alas}
               onChange={(e) => setAlas(e.target.value)}
               placeholder="Alas"
@@ -76,7 +76,7 @@ const Segitiga = () => {
             <label className="block text-sm font-medium text-gray-800 mb-1">Tinggi</label>
             <input 
               type="number" 
-              className="w-full rounded border border-gray-300 p-2"
+              className="w-full rounded border border-gray-300 p-2 text-black"
               value={tinggi}
               onChange={(e) => setTinggi(e.target.value)}
               placeholder="Tinggi"
@@ -86,7 +86,7 @@ const Segitiga = () => {
             <label className="block text-sm font-medium text-gray-800 mb-1">Sisi</label>
             <input 
               type="number" 
-              className="w-full rounded border border-gray-300 p-2"
+              className="w-full rounded border border-gray-300 p-2 text-black"
               value={sisi}
               onChange={(e) => setSisi(e.target.value)}
               placeholder="Sisi"
@@ -107,16 +107,16 @@ const Segitiga = () => {
           <table className="w-full">
             <thead>
               <tr>
-                <th className="border-b border-r border-gray-300 p-2 text-center bg-gray-100">Luas</th>
-                <th className="border-b border-gray-300 p-2 text-center bg-gray-100">Keliling</th>
+                <th className="border-b border-r border-gray-300 p-2 text-center bg-gray-100 text-black">Luas</th>
+                <th className="border-b border-gray-300 p-2 text-center bg-gray-100 text-black">Keliling</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="border-r border-gray-300 p-2 text-center">
+                <td className="border-r border-gray-300 p-2 text-center text-black">
                   {luas !== null ? luas.toFixed(2) : ''}
                 </td>
-                <td className="p-2 text-center">
+                <td className="p-2 text-center text-black">
                   {keliling !== null ? keliling.toFixed(2) : ''}
                 </td>
               </tr>
