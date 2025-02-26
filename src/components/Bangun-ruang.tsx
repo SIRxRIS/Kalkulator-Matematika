@@ -8,7 +8,7 @@ const BangunRuang = () => {
       {/* Tombol Kembali */}
       <Link
         href="/home"
-        className="absolute top-4 left-4 z-30 text-white text-6xl"
+        className="absolute top-4 left-4 z-30 text-white text-5xl"
       >
         <IoArrowBack />
       </Link>

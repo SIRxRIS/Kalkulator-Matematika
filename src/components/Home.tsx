@@ -18,7 +18,7 @@ const Home = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-4 text-center">
         <Link href="/bangun-datar">
           <button
-            className="inline-block px-8 py-3 font-bold text-[16px] text-white border border-white rounded-full 
+            className="inline-block px-8 py-3 font-bold text-[20px] text-white border border-white rounded-full 
                      hover:bg-[#8CBEFF] hover:border-[#8CBEFF] transition-all duration-1000
                      cursor-pointer"
           >
@@ -28,7 +28,7 @@ const Home = () => {
         <div className="h-2"></div> {/* Spacer */}
         <Link href="/bangun-ruang">
           <button
-            className="inline-block px-8 py-3 font-bold text-[16px] text-white  border border-white rounded-full 
+            className="inline-block px-8 py-3 font-bold text-[20px] text-white  border border-white rounded-full 
                      hover:bg-[#8CBEFF] hover:border-[#8CBEFF] transition-all duration-1000
                      cursor-pointer"
           >

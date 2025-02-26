@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { IoArrowBack } from "react-icons/io5"; // Import ikon
+import { IoArrowBack, IoArrowForward } from "react-icons/io5"; // Import ikon
 
 const PersegiPanjang = () => {
   const [panjang, setPanjang] = useState("");
@@ -25,26 +25,31 @@ const PersegiPanjang = () => {
     <div className="min-h-screen w-full pattern-background relative">
       {/* Header with back button and names */}
       <div className="flex justify-between items-center p-4 absolute top-0 left-0 right-0 z-30">
-        <div className="flex items-center gap-4 ml-[100px]">
-          {" "}
-          {/* Tambahkan margin kiri */}
+        {/* Bagian Kiri */}
+        <div className="flex items-center gap-4">
           <Link href="/bangun-datar">
-            <IoArrowBack className="absolute top-4 left-4 z-30 text-white text-6xl" />
+            <IoArrowBack className="text-white text-5xl" />
           </Link>
-          <span className="text-white font-bold text-[32px] font-poppins ml-[50px]">
+          <span className="text-white font-bold text-[32px] font-poppins ml-[100px]">
             Kelompok 4
           </span>
         </div>
-        <span className="text-white font-bold text-[32px] font-poppins mr-[150px]">
-          Faris Hazim Supriyadi
-        </span>{" "}
-        {/* Tambahkan margin kanan */}
+
+        {/* Bagian Kanan */}
+        <div className="flex items-center gap-4">
+          <span className="text-white font-bold text-[32px] font-poppins mr-[100px]">
+            Faris Hazim Supriyadi
+          </span>
+          <Link href="/bangun-ruang/tabung">
+            <IoArrowForward className="text-white text-5xl" />
+          </Link>
+        </div>
       </div>
 
       {/* Main Calculator Card */}
       <div
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                      w-[90%] max-w-2xl bg-[#F7E581] rounded-xl p-6 shadow-lg"
+                      w-[90%] max-w-2xl  rounded-xl p-6 shadow-2xl bg-[#F7E581]"
       >
         <h1 className="text-center text-[28px] text-black font-poppins font-bold mb-6">
           Kalkulator Persegi Panjang
@@ -56,7 +61,7 @@ const PersegiPanjang = () => {
             <h2 className="font-poppins text-black text-[24px] font-semibold mb-2">
               Rumus Luas
             </h2>
-            <div className="bg-white text-black p-2 rounded text-center font-poppins">
+            <div className="bg-white text-[16] text-black p-2 rounded text-center font-poppins outline outline-1 outline-black">
               Panjang × Lebar
             </div>
           </div>
@@ -64,7 +69,7 @@ const PersegiPanjang = () => {
             <h2 className="font-poppins text-[24px] text-black font-semibold mb-2">
               Rumus Keliling
             </h2>
-            <div className="bg-white p-2 rounded text-black text-center font-poppins">
+            <div className="bg-white p-2 rounded text-[16px] text-black text-center font-poppins outline outline-1 outline-black">
               (2 × Panjang) + (2 × Lebar)
             </div>
           </div>
@@ -81,7 +86,7 @@ const PersegiPanjang = () => {
               value={panjang}
               onChange={(e) => setPanjang(e.target.value)}
               className="w-full p-2 text-black rounded font-poppins"
-              placeholder="Masukkan panjang"
+              placeholder="Masukkan panjang (cm)"
             />
           </div>
           <div>
@@ -93,7 +98,7 @@ const PersegiPanjang = () => {
               value={lebar}
               onChange={(e) => setLebar(e.target.value)}
               className="w-full p-2 rounded text-black font-poppins"
-              placeholder="Masukkan lebar"
+              placeholder="Masukkan lebar (cm)"
             />
           </div>
         </div>
@@ -104,7 +109,7 @@ const PersegiPanjang = () => {
             onClick={hitungPersegiPanjang}
             className="w-[130px] py-3 bg-[#5AA1FF] text-white rounded-full 
                        hover:bg-[#4891f0] transition-all duration-300 
-                       font-poppins text-[20px] text-sm mb-6"
+                       font-poppins text-[20px] text-sm mb-6 shadow-xl"
           >
             Hitung
           </button>
@@ -120,7 +125,7 @@ const PersegiPanjang = () => {
               type="text"
               value={hasil.luas}
               readOnly
-              className="w-full p-2 rounded text-black font-poppins bg-white"
+              className="w-full p-2 rounded text-black font-poppins bg-white outline outline-1 outline-black"
             />
           </div>
           <div>
@@ -131,7 +136,7 @@ const PersegiPanjang = () => {
               type="text"
               value={hasil.keliling}
               readOnly
-              className="w-full p-2 rounded text-black font-poppins bg-white"
+              className="w-full p-2 rounded text-black font-poppins bg-white outline outline-1 outline-black"
             />
           </div>
         </div>
