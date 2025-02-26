@@ -67,7 +67,7 @@ const Tabung2 = () => {
         </h1>
         <p className="text-black mb-2 font-semibold">Masukkan Nilai</p>
 
-        <label className="block text-left font-semibold">
+        <label className="block text-left font-semibold text-black">
           Jari-Jari (r):
         </label>
         <input
@@ -75,10 +75,10 @@ const Tabung2 = () => {
           placeholder="Masukkan Jari-Jari"
           value={jariJari}
           onChange={(e) => setJariJari(e.target.value)}
-          className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md"
+          className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md text-black"
         />
 
-        <label className="block text-left font-semibold">
+        <label className="block text-left font-semibold text-black">
           Tinggi (t):
         </label>
         <input
@@ -86,14 +86,14 @@ const Tabung2 = () => {
           placeholder="Masukkan Tinggi"
           value={tinggi}
           onChange={(e) => setTinggi(e.target.value)}
-          className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md"
+          className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md text-black"
         />
 
-        <label className="block text-left font-semibold">Pilih π:</label>
+        <label className="block text-left font-semibold text-black">Pilih π:</label>
         <select
           value={phiOption}
           onChange={(e) => setPhiOption(e.target.value)}
-          className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md"
+          className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md text-black"
         >
           <option value="3.14159265359">π ≈ 3.1416</option>
           <option value="3.14285714286">π ≈ 22/7</option>
@@ -106,17 +106,17 @@ const Tabung2 = () => {
           Hitung
         </button>
 
-        <label className="block text-left font-semibold">Hasil:</label>
+        <label className="block text-left font-semibold text-black text-2xl">Hasil:</label>
         <div className="border border-gray-400 p-4 bg-white rounded-lg shadow-md text-left">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <p className="font-semibold">
+              <p className="font-semibold text-black">
                 Volume:{" "}
                 {volume !== null
                   ? `${formatNumber(volume)} ${satuan}³`
                   : "-"}
               </p>
-              <p className="font-semibold">
+              <p className="font-semibold text-black">
                 Luas Permukaan:{" "}
                 {luasPermukaan !== null
                   ? `${formatNumber(luasPermukaan)} ${satuan}²`
@@ -124,13 +124,13 @@ const Tabung2 = () => {
               </p>
             </div>
             <div>
-              <p className="font-semibold">
+              <p className="font-semibold text-black">
                 Luas Alas:{" "}
                 {luasAlas !== null
                   ? `${formatNumber(luasAlas)} ${satuan}²`
                   : "-"}
               </p>
-              <p className="font-semibold">
+              <p className="font-semibold text-black">
                 Luas Selimut:{" "}
                 {luasSelimut !== null
                   ? `${formatNumber(luasSelimut)} ${satuan}²`
@@ -169,7 +169,7 @@ const Tabung2 = () => {
             >
               <IoClose />
             </button>
-            <h2 className="text-xl font-bold text-center mb-4">Rumus Tabung</h2>
+            <h2 className="text-xl font-bold text-center mb-4 text-black">Rumus Tabung</h2>
             <p>
               <strong>Volume:</strong> π × r² × t
             </p>
@@ -198,7 +198,7 @@ const Tabung2 = () => {
             >
               <IoClose />
             </button>
-            <h2 className="text-xl font-bold text-center mb-4">
+            <h2 className="text-xl font-bold text-center mb-4 ">
               Hasil Perhitungan
             </h2>
             <div className="space-y-3">
