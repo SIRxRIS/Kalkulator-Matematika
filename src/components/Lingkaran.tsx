@@ -5,6 +5,7 @@ import { Calculator, Circle, } from 'lucide-react';
 import { BackgroundGradient } from "../components/Bola/components/ui/background-gradient";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
+import { motion } from 'framer-motion';
 
 
 export default function CircleCalculator() {
@@ -26,19 +27,44 @@ export default function CircleCalculator() {
     setPerimeter(null);
   };
 
+  const headerVariants = {
+    hidden: { y: -50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      }
+    }
+  };
+
+
   return (
     <div
       className="absolute inset-0 h-full w-full  bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
     > 
+    <motion.header
+        initial="hidden"
+        animate="visible"
+        variants={headerVariants}
+      >
     <Link
         href="/bangun-datar"
         className="absolute top-4 left-4 z-30 text-white text-6xl"
       >
         <IoArrowBack />
       </Link>
-
+      </motion.header>
       <div className="min-h-screen flex items-center justify-center p-8">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }} 
+        animate={{ opacity: 1, scale: 1 }} 
+        transition={{ duration: 0.5 }}
+      >
         <BackgroundGradient className="rounded-[24px] bg-white dark:bg-zinc-900">
+
           <div className="bg-gray-800 rounded-[30px] shadow-xl p-12 w-full max-w-lg">
             <div className="flex items-center gap-4 mb-8">
               <Circle className="w-10 h-10 text-blue-500" />
@@ -108,9 +134,17 @@ export default function CircleCalculator() {
             </div>
           </div>
         </BackgroundGradient>
+        </motion.div>
+        <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
         <h1 className="absolute bottom-4 right-4">
           Muhammad Naufal Habibi
         </h1>
+        </motion.div>
+
       </div>
     </div>
   );

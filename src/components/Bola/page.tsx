@@ -5,6 +5,7 @@ import { Calculator } from 'lucide-react';
 import { BackgroundGradient } from "../Bola/components/ui/background-gradient";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
+import { motion } from 'framer-motion';
 
 export default function SphereCalculator() {
   const [radius, setRadius] = useState<string>('');
@@ -36,6 +37,11 @@ export default function SphereCalculator() {
       >
         <IoArrowBack />
       </Link>
+      <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+              transition={{ duration: 0.5 }}
+            >
         <BackgroundGradient className="rounded-[24px] bg-white dark:bg-zinc-900">
           <div className="bg-gray-800 rounded-[30px] shadow-xl p-12 w-full max-w-lg">
             <div className="flex items-center gap-4 mb-8">
@@ -103,9 +109,16 @@ export default function SphereCalculator() {
             </div>
           </div>
         </BackgroundGradient>
+        </motion.div>
+        <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
         <h1 className="absolute bottom-4 right-4">
           Muhammad Naufal Habibi
         </h1>
+        </motion.div>
       </div>
     </div>
   );

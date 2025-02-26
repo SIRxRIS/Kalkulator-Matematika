@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Intro = () => {
   return (
@@ -24,13 +25,17 @@ const Intro = () => {
         </p>
 
         <Link href="/home">
-          <button
-            className="inline-block px-8 py-3 font-bold text-[18px] text-white border border-white rounded-full 
-                     hover:bg-[#8CBEFF] hover:border-[#8CBEFF] transition-all duration-1000
-                     cursor-pointer"
-          >
+        <motion.button
+        className="inline-block px-8 py-3 font-bold text-[18px] text-white border border-white rounded-full 
+        hover:bg-[#8CBEFF] hover:border-[#8CBEFF] transition-all duration-50
+        cursor-pointer"
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+> 
+          
             Masuk
-          </button>
+          
+          </motion.button>
         </Link>
       </div>
     </div>
