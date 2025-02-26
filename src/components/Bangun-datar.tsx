@@ -1,118 +1,104 @@
 import React from "react";
 import Link from "next/link";
-import { IoArrowBack } from "react-icons/io5"; // Import ikon
+import { IoArrowBack } from "react-icons/io5";
+import InfiniteScroll from './InfiniteScroll';
 
 const BangunDatar = () => {
+  const items = [
+    { 
+      content: (
+        <Link href="/bangun-datar/persegi" className="w-full py-2 text-white hover:opacity-75 transition-all duration-300 font-poppins text-[20px] block text-center">
+          Persegi
+        </Link>
+      )
+    },
+    {
+      content: (
+        <Link href="/bangun-datar/jajar-genjang" className="w-full py-2 text-white hover:opacity-75 transition-all duration-300 font-poppins text-[20px] block text-center">
+          Jajar Genjang
+        </Link>
+      )
+    },
+    {
+      content: (
+        <Link href="/bangun-datar/persegi-panjang" className="w-full py-2 text-white hover:opacity-75 transition-all duration-300 font-poppins text-[20px] block text-center">
+          Persegi Panjang
+        </Link>
+      )
+    },
+    {
+      content: (
+        <Link href="/bangun-datar/layang-layang" className="w-full py-2 text-white hover:opacity-75 transition-all duration-300 font-poppins text-[20px] block text-center">
+          Layang-layang
+        </Link>
+      )
+    },
+    {
+      content: (
+        <Link href="/bangun-datar/persegi-panjang2" className="w-full py-2 text-white hover:opacity-75 transition-all duration-300 font-poppins text-[20px] block text-center">
+          Persegi Panjang II
+        </Link>
+      )
+    },
+    {
+      content: (
+        <Link href="/bangun-datar/lingkaran" className="w-full py-2 text-white hover:opacity-75 transition-all duration-300 font-poppins text-[20px] block text-center">
+          Lingkaran
+        </Link>
+      )
+    },
+    {
+      content: (
+        <Link href="/bangun-datar/belah-ketupat" className="w-full py-2 text-white hover:opacity-75 transition-all duration-300 font-poppins text-[20px] block text-center">
+          Belah Ketupat
+        </Link>
+      )
+    },
+    {
+      content: (
+        <Link href="/bangun-datar/segitiga" className="w-full py-2 text-white hover:opacity-75 transition-all duration-300 font-poppins text-[20px] block text-center">
+          Segitiga
+        </Link>
+      )
+    },
+    {
+      content: (
+        <Link href="/bangun-datar/trapesium" className="w-full py-2 text-white hover:opacity-75 transition-all duration-300 font-poppins text-[20px] block text-center">
+          Trapesium
+        </Link>
+      )
+    }
+  ];
+
   return (
-    <div className="min-h-screen w-full pattern-background relative">
-      {/* Tombol Kembali */}
-      <Link
-        href="/home"
-        className="absolute top-4 left-4 z-30 text-white text-5xl"
-      >
+    <div className="min-h-screen w-full bg-black relative">
+      {/* Navigation bar */}
+      <nav className="flex justify-between items-center px-6 py-4 relative z-20">
+        <div className="text-white font-bold text-[32px] font-poppins ml-[150px]">
+          Kelompok 4
+        </div>
+        <div className="text-white font-bold text-[32px] font-poppins mr-[150px]">
+          Website Kalkulator
+        </div>
+      </nav>
+
+      {/* Back button */}
+      <Link href="/home" className="absolute top-4 left-4 z-30 text-white text-5xl">
         <IoArrowBack />
       </Link>
 
-      {/* Main content wrapper */}
-      <div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                      w-[90%] max-w-2xl bg-[#F7E581] rounded-xl p-6 shadow-lg"
-      >
-        <h1 className="text-black text-center text-[28px] font-poppins font-bold mb-6">
-          Kalkulator Bangun Datar
-        </h1>
-
-        {/* Grid layout for buttons */}
-        <div className="grid grid-cols-2 gap-4">
-          <Link href="/bangun-datar/persegi">
-            <button
-              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
-                             hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-[20px] shadow-xl"
-            >
-              Persegi
-            </button>
-          </Link>
-
-          <Link href="/bangun-datar/jajar-genjang">
-            <button
-              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
-                             hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-[20px] shadow-xl"
-            >
-              Jajar Genjang
-            </button>
-          </Link>
-
-          <Link href="/bangun-datar/persegi-panjang">
-            <button
-              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
-                             hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-[20px] shadow-xl"
-            >
-              Persegi Panjang
-            </button>
-          </Link>
-
-          <Link href="/bangun-datar/layang-layang">
-            <button
-              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
-                             hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-[20px] shadow-xl"
-            >
-              Layang-layang
-            </button>
-          </Link>
-
-          <Link href="/bangun-datar/persegi-panjang2">
-            <button
-              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
-                             hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-[20px] shadow-xl"
-            >
-              Persegi Panjang II
-            </button>
-          </Link>
-
-          <Link href="/bangun-datar/lingkaran">
-            <button
-              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
-                             hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-[20px] shadow-xl"
-            >
-              Lingkaran
-            </button>
-          </Link>
-
-          <Link href="/bangun-datar/belah-ketupat">
-            <button
-              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
-                             hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-[20px] shadow-xl"
-            >
-              Belah Ketupat
-            </button>
-          </Link>
-
-          <Link href="/bangun-datar/segitiga">
-            <button
-              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
-                             hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-[20px] shadow-xl"
-            >
-              Segitiga
-            </button>
-          </Link>
-
-          <Link href="/bangun-datar/trapesium">
-            <button
-              className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
-                             hover:bg-[#4891f0] transition-all duration-300 
-                             font-poppins text-[20px] shadow-xl"
-            >
-              Trapesium
-            </button>
-          </Link>
+      {/* Main content with InfiniteScroll */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
+          <InfiniteScroll
+            items={items}
+            isTilted={true}
+            tiltDirection='left'
+            autoplay={true}
+            autoplaySpeed={0.1}
+            autoplayDirection="down"
+            pauseOnHover={true}
+          />
         </div>
       </div>
     </div>
