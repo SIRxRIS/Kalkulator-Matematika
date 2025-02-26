@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -17,23 +18,27 @@ const Home = () => {
       {/* Main content - Centered buttons */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-4 text-center">
         <Link href="/bangun-datar">
-          <button
+          <motion.button
             className="inline-block px-8 py-3 font-bold text-[20px] text-white border border-white rounded-full 
-                     hover:bg-[#8CBEFF] hover:border-[#8CBEFF] transition-all duration-1000
+                     hover:bg-[#8CBEFF] hover:border-[#8CBEFF] transition-all duration-50
                      cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
           >
             Bangun Datar
-          </button>
+          </motion.button>
         </Link>
         <div className="h-2"></div> {/* Spacer */}
         <Link href="/bangun-ruang">
-          <button
-            className="inline-block px-8 py-3 font-bold text-[20px] text-white  border border-white rounded-full 
-                     hover:bg-[#8CBEFF] hover:border-[#8CBEFF] transition-all duration-1000
+          <motion.button
+            className="inline-block px-8 py-3 font-bold text-[20px] text-white border border-white rounded-full 
+                     hover:bg-[#8CBEFF] hover:border-[#8CBEFF] transition-all duration-50
                      cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
           >
             Bangun Ruang
-          </button>
+          </motion.button>
         </Link>
       </div>
     </div>

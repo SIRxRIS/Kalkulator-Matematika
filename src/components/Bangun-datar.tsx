@@ -64,7 +64,7 @@ const BangunDatar = () => {
             </button>
           </Link>
 
-          <Link href="/bangun-datar/persegi-panjang">
+          <Link href="/bangun-datar/persegi-panjang2">
             <button
               className="w-full py-2 bg-[#5AA1FF] text-white rounded-full 
                              hover:bg-[#4891f0] transition-all duration-300 
