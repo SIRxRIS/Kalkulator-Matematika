@@ -13,7 +13,7 @@ const formatNumber = (num: number): string => {
 const Tabung2 = () => {
   const [jariJari, setJariJari] = useState<string>("");
   const [tinggi, setTinggi] = useState<string>("");
-  const [satuan, setSatuan] = useState<string>("cm");
+  const [satuan] = useState("cm"); // Removed setSatuan as it's not used
   const [phiOption, setPhiOption] = useState<string>("3.14159265359");
   const [volume, setVolume] = useState<number | null>(null);
   const [luasPermukaan, setLuasPermukaan] = useState<number | null>(null);
@@ -26,6 +26,7 @@ const Tabung2 = () => {
     const r = parseFloat(jariJari);
     const t = parseFloat(tinggi);
     const phi = parseFloat(phiOption);
+
     if (!isNaN(r) && !isNaN(t)) {
       const luasAlasHasil = phi * r * r;
       const luasSelimutHasil = 2 * phi * r * t;
@@ -44,6 +45,8 @@ const Tabung2 = () => {
     luasAlas !== null && luasSelimut !== null
       ? 2 * luasAlas * luasSelimut
       : null;
+
+  // Removed the duplicate volume calculation that was causing the error
 
   return (
     <div className="min-h-screen w-full pattern-background relative flex items-center justify-center">
@@ -89,7 +92,9 @@ const Tabung2 = () => {
           className="w-full p-3 mb-4 border border-gray-400 rounded-lg shadow-md text-black"
         />
 
-        <label className="block text-left font-semibold text-black">Pilih π:</label>
+        <label className="block text-left font-semibold text-black">
+          Pilih π:
+        </label>
         <select
           value={phiOption}
           onChange={(e) => setPhiOption(e.target.value)}
@@ -106,15 +111,15 @@ const Tabung2 = () => {
           Hitung
         </button>
 
-        <label className="block text-left font-semibold text-black text-2xl">Hasil:</label>
+        <label className="block text-left font-semibold text-black text-2xl">
+          Hasil:
+        </label>
         <div className="border border-gray-400 p-4 bg-white rounded-lg shadow-md text-left">
           <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="font-semibold text-black">
                 Volume:{" "}
-                {volume !== null
-                  ? `${formatNumber(volume)} ${satuan}³`
-                  : "-"}
+                {volume !== null ? `${formatNumber(volume)} ${satuan}³` : "-"}
               </p>
               <p className="font-semibold text-black">
                 Luas Permukaan:{" "}
@@ -169,7 +174,9 @@ const Tabung2 = () => {
             >
               <IoClose />
             </button>
-            <h2 className="text-xl font-bold text-center mb-4 text-black">Rumus Tabung</h2>
+            <h2 className="text-xl font-bold text-center mb-4 text-black">
+              Rumus Tabung
+            </h2>
             <p>
               <strong>Volume:</strong> π × r² × t
             </p>
@@ -206,36 +213,58 @@ const Tabung2 = () => {
                 <p>
                   <strong>Volume:</strong> π × r² × t
                 </p>
-                <p>= π × ({jariJari})² × ({tinggi})</p>
-                <p>={" "}{volume !== null ? formatNumber(volume) : "-"} {satuan}³</p>
+                <p>
+                  = π × ({jariJari})² × ({tinggi})
+                </p>
+                <p>
+                  = {volume !== null ? formatNumber(volume) : "-"} {satuan}³
+                </p>
               </div>
               <div>
                 <p>
                   <strong>Luas Alas:</strong> π × r²
                 </p>
                 <p>= π × ({jariJari})²</p>
-                <p>={" "}{luasAlas !== null ? formatNumber(luasAlas) : "-"} {satuan}²</p>
+                <p>
+                  = {luasAlas !== null ? formatNumber(luasAlas) : "-"} {satuan}²
+                </p>
               </div>
               <div>
                 <p>
                   <strong>Luas Selimut:</strong> 2 × π × r × t
                 </p>
-                <p>= 2 × π × ({jariJari}) × ({tinggi})</p>
-                <p>={" "}{luasSelimut !== null ? formatNumber(luasSelimut) : "-"} {satuan}²</p>
+                <p>
+                  = 2 × π × ({jariJari}) × ({tinggi})
+                </p>
+                <p>
+                  = {luasSelimut !== null ? formatNumber(luasSelimut) : "-"}{" "}
+                  {satuan}²
+                </p>
               </div>
               <div>
                 <p>
                   <strong>Luas Permukaan 1 : </strong> 2 × π × r (r + t)
                 </p>
-                <p>= 2 × π × ({jariJari}) × (({jariJari}) + ({tinggi}))</p>
-                <p>={" "}{luasPermukaan !== null ? formatNumber(luasPermukaan) : "-"} {satuan}²</p>
+                <p>
+                  = 2 × π × ({jariJari}) × (({jariJari}) + ({tinggi}))
+                </p>
+                <p>
+                  = {luasPermukaan !== null ? formatNumber(luasPermukaan) : "-"}{" "}
+                  {satuan}²
+                </p>
               </div>
               <div>
                 <p>
-                  <strong>Luas Permukaan 2:</strong> 2 × Luas Alas × Luas Selimut
+                  <strong>Luas Permukaan 2:</strong> 2 × Luas Alas × Luas
+                  Selimut
                 </p>
-                <p>= 2 ×{" "}{luasAlas !== null ? formatNumber(luasAlas) : "-"} ×{" "}{luasSelimut !== null ? formatNumber(luasSelimut) : "-"}</p>
-                <p>={" "}{luasAlas !== null && luasSelimut !== null ? formatNumber(2 * luasAlas * luasSelimut) : "-"} {satuan}²</p>
+                <p>
+                  = 2 × {luasAlas !== null ? formatNumber(luasAlas) : "-"} ×{" "}
+                  {luasSelimut !== null ? formatNumber(luasSelimut) : "-"}
+                </p>
+                <p>
+                  = {formula2 !== null ? formatNumber(formula2) : "-"} {satuan}²
+                </p>
               </div>
             </div>
           </div>

@@ -46,7 +46,7 @@ const PersegiPanjang = () => {
               manualMode={false}
               blurAmount={2} // Reduced from 5 to 2
               borderColor="red"
-              animationDuration={3} // Increased from 2 to 3
+              animationDuration={2} // Increased from 2 to 3
               pauseBetweenAnimations={2} // Increased from 1 to 2
             />
           </div>

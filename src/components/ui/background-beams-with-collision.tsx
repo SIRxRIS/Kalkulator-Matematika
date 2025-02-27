@@ -122,8 +122,8 @@ export const BackgroundBeamsWithCollision = ({
         <CollisionMechanism
           key={`beam-${index}`}
           beamOptions={beam}
-          containerRef={containerRef as React.RefObject<HTMLDivElement>}
-          parentRef={parentRef as React.RefObject<HTMLDivElement>}
+          containerRef={containerRef}
+          parentRef={parentRef}
         />
       ))}
 
@@ -140,11 +140,12 @@ export const BackgroundBeamsWithCollision = ({
   );
 };
 
+// Fixed component with proper TypeScript types
 const CollisionMechanism = React.forwardRef<
   HTMLDivElement,
   {
-    containerRef: React.RefObject<HTMLDivElement>;
-    parentRef: React.RefObject<HTMLDivElement>;
+    containerRef: React.RefObject<HTMLDivElement | null>; // Updated type
+    parentRef: React.RefObject<HTMLDivElement | null>; // Updated type
     beamOptions?: {
       initialX?: number | string;
       translateX?: number | string;
@@ -157,7 +158,8 @@ const CollisionMechanism = React.forwardRef<
       repeatDelay?: number;
     };
   }
->(({ parentRef, containerRef, beamOptions = {} }) => {
+>((props, ref) => {
+  const { parentRef, containerRef, beamOptions = {} } = props;
   const beamRef = useRef<HTMLDivElement>(null);
   const [collision, setCollision] = useState<{
     detected: boolean;

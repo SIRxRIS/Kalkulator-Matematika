@@ -26,6 +26,7 @@ interface InfiniteScrollProps {
   autoplayDirection?: "down" | "up"; // "down" or "up"
   pauseOnHover?: boolean; // Pause autoplay on hover
 }
+
 const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
   width = "30rem",
   maxHeight = "100%",

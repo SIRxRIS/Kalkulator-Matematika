@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Mesh, PlaneGeometry, MeshStandardMaterial } from "three";
+import { Mesh } from "three";
 import { useEffect, useRef } from "react";
 
 export default function KiteCalculator() {
