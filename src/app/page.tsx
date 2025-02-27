@@ -6,16 +6,6 @@ import BangunDatar from "@/components/Bangun-datar";
 import BangunRuang from "@/components/Bangun-ruang";
 import Persegipanjang from "@/components/Persegi-panjang";
 
-function Page() {
-  return (
-    <>
-      {/* Intro */}
-      <section>
-        <Intro />
-      </section>
-      {/* End Intro */}
-    </>
-  );
+export default function Home() {
+  return <Intro />;
 }
-
-export default Page;
